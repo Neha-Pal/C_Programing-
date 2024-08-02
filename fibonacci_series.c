@@ -1,14 +1,14 @@
 #include<stdio.h>
-int fibonacci(int n){
-    if(n==1 || n==2){
-        return n-1;
+int fibonacii(int n){
+    if(n<=1){
+        return n;
     }
-    return fibonacci(n-1) + fibonacci(n-2);
+    return fibonacii(n-1)+fibonacii(n-2);
 }
 int main(){
-    int number;
-    printf("Enter a number:");
-    scanf("%d",&number);
-    printf("Fibonacci series at %d is - %d",number,fibonacci(number));
+    int n = 4;
+    for(int i=0;i<n;i++){
+        printf("%d, ",fibonacii(i));
+    }
     return 0;
 }
